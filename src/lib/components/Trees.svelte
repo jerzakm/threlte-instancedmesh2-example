@@ -6,8 +6,7 @@
 
   export let mesh: Mesh<BufferGeometry, MeshStandardMaterial>;
   export let count: number;
-
-  const terrainSize = 125000;
+  export let terrainSize: number;
 
   const { renderer } = useThrelte();
 
@@ -26,12 +25,7 @@
     },
   });
 
-  // trees.castShadow = true;
-  // trees.cursor = "pointer";
-
-  // trees.on("click", (e) => {
-  //   trees.instances[e.intersection.instanceId].visible = false;
-  // });
+  trees.castShadow = true;
 </script>
 
 <T is={trees} />
